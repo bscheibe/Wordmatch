@@ -32,4 +32,13 @@ function! HighlightWordmatch()
 endfunction
 
 
-function!
+function! ToggleWordMatching()
+        let g:cursor_word_match=!g:cursor_word_match
+        match
+        call HighlightWordmatch()
+endfunction
+
+
+function! setMaxFilesize()
+        let g:max_filesize=input('Enter a new maximum filesize for wordmatching (kilobytes): ')
+endfunction
