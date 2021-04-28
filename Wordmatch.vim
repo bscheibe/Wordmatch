@@ -7,6 +7,10 @@ let g:cursor_word_match=1
 let g:max_filesize=300000 " Default to 300KB
 
 
+" Vim commands
+ab wordmatch call ToggleWordmatching()
+ab maxwordmatch call SetMaxFilesize()
+
 " Colors to be used
 hi MyMatch ctermbg=yellow ctermfg=white guidb=darkgreen guifg=white term=underline cterm=bold,underline
 
@@ -40,5 +44,5 @@ endfunction
 
 
 function! setMaxFilesize()
-        let g:max_filesize=input('Enter a new maximum filesize for wordmatching (kilobytes): ')
+        let g:max_filesize=1000*input('Enter a new maximum filesize for wordmatching (kilobytes): ')
 endfunction
